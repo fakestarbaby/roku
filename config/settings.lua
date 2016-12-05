@@ -1,9 +1,9 @@
-local logger = require "lib.logger"
+local Logger = require "lib.logger"
 
 SETTINGS = {
   DEBUG = false,
 
   LOGGER = {
-    LEVEL = logger.LEVEL.DEBUG,
+    LEVEL = Logger.LEVEL.DEBUG,
   },
 }

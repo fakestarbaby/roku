@@ -6,17 +6,17 @@ Framework for Corona SDK.
 
 ```lua
 -- Require logger
-local logger = require "lib.logger"
+local Logger = require "lib.logger"
 
 -- Default: LEVEL.RELEASE
-logger.setLevel(logger.LEVEL.DEBUG)
+Logger.setLevel(Logger.LEVEL.DEBUG)
 
 -- Output logs to console
-logger.debug("This is debug message.")
-logger.info("This is info message.")
-logger.warn("This is warn message.")
-logger.error("This is error message.")
-logger.release("This is release message.")
+Logger.debug("This is debug message.")
+Logger.info("This is info message.")
+Logger.warn("This is warn message.")
+Logger.error("This is error message.")
+Logger.release("This is release message.")
 ```
 
 ```console
@@ -33,7 +33,7 @@ Only greater than or equal to the specified log level of log is output.
 
 ```lua
 -- Log level: DEBUG < INFO < WARN < ERROR < RELEASE
-logger.setLevel(logger.LEVEL.ERROR)
+Logger.setLevel(Logger.LEVEL.ERROR)
 ```
 
 ```console
