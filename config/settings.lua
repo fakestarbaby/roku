@@ -1,7 +1,7 @@
 local Logger = require "lib.logger"
 
 SETTINGS = {
-  DEBUG = false,
+  DEBUG = true,
 
   LOGGER = {
     LEVEL = Logger.LEVEL.DEBUG,
