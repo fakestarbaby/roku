@@ -3,6 +3,8 @@ local Composer = require "composer"
 
 local Scene = Composer.newScene()
 
+local View = require("app.views.splash_screen_view").new()
+
 function Scene:addSystemEventListener()
   function Scene.splashScreenSystemEventListener(event)
     if event.type == "applicationSuspend" then
@@ -21,10 +23,14 @@ function Scene:removeSystemEventListener()
 end
 
 function Scene:create(event)
+  local group = self.view
   Logger.debug(event.name)
+
+  group:insert(View)
 end
 
 function Scene:show(event)
+  local group = self.view
   local phase = event.phase
   Logger.debug(string.format("%s: %s", event.name, phase))
 
@@ -35,6 +41,7 @@ function Scene:show(event)
 end
 
 function Scene:hide(event)
+  local group = self.view
   local phase = event.phase
   Logger.debug(string.format("%s: %s", event.name, phase))
 
@@ -45,6 +52,7 @@ function Scene:hide(event)
 end
 
 function Scene:destroy(event)
+  local group = self.view
   Logger.debug(event.name)
 end
 
