@@ -1,4 +1,5 @@
 local Logger = require "lib.logger"
+local GA = require "plugin.googleAnalytics"
 local Composer = require "composer"
 
 local Scene = Composer.newScene()
@@ -36,6 +37,7 @@ function Scene:show(event)
 
   if phase == "will" then
   elseif phase == "did" then
+    GA.logScreenName(Composer.getSceneName("current"))
     Scene:addSystemEventListener()
   end
 end

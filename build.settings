@@ -4,6 +4,13 @@ settings = {
     supported = { "portrait", },
   },
 
+  plugins = {
+    ["plugin.googleAnalytics"] = {
+      publisherId = "com.coronalabs",
+      supportedPlatforms = { iphone = true, android = true, }
+    },
+  },
+
   excludeFiles = {
     iphone = { "Icon-*dpi.png", },
     android = { "Icon.png", "Icon-Small-*.png", "Icon*@2x.png", },
@@ -38,6 +45,7 @@ settings = {
   android = {
     usesPermissions = {
       "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
     },
   },
 }

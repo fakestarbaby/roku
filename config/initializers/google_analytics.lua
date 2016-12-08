@@ -1,0 +1,2 @@
+local GA = require "plugin.googleAnalytics"
+GA.init(SETTINGS.GOOGLE_ANALYTICS.APP_NAME, SETTINGS.GOOGLE_ANALYTICS.TRACKING_ID)
